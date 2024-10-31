@@ -1,0 +1,51 @@
+.item, .item3, .item2{
+    border: solid 5px red;
+    margin: 10px;
+}
+
+.auto-fill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.item3 {
+    grid-column-end: -1;
+}
+
+.item1 {
+    border: solid 5px blue;
+    margin: 10px;
+}
+
+.auto-fit {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.repeat {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(2, 200px);
+}
+
+
+.subgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+.card {
+    border: 5px solid red;
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: subgrid;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
